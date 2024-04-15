@@ -22,3 +22,7 @@ In your Workspace, to run locally my project, there should be one extension call
 
 Click on Live Server Icon, the project will be automatically open in browser.
 
+## Screen Shots
+
+![Case 1](/assets/case1.png?raw=true "Optional Title")
+
