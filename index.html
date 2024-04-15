@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Tax Calculator</h1>
+    <div class="container">
+        <form id="taxForm">
+            <div class="form-group">
+                <div style="display:grid;">
+                    <label for="age">Age</label>
+                    <select id="age" class="form-control1">
+                        <option value="<40">&lt;40</option>
+                        <option value="40-60">&ge; 40 &lt; 60</option>
+                        <option value="≥60">&ge; 60</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="income">Enter Gross Annual Income (In Rupees)</label>
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <input type="text" id="income" class="form-control" step="0.01">
+                    <div class="error-icon" id="incomeErrorIcon" title="Enter a valid income"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="extraIncome">Enter Extra Income (In Rupees)</label>
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <input type="text" id="extraIncome" class="form-control" step="0.01">
+                    <div class="error-icon" id="extraIncomeErrorIcon" title="Enter a valid extra income"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="deductions">Enter Deductions (In Rupees)</label>
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <input type="text" id="deductions" class="form-control" step="0.01">
+                    <div class="error-icon" id="deductionsErrorIcon" title="Enter a valid deduction"></div>
+                </div>
+            </div>
+            <button type="submit" class="btn"><p style="font-size: 15px;">Calculate Tax</p></button>
+        </form>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Tax Calculation Result</h2>
+            <div>
+                <p><strong>Taxable Income:</strong> 
+            </div>
+            <div style="text-align: center; font-size: 36px;">
+                <span id="taxableIncome"></span></p>
+            </div>
+            <div>
+                <p><strong>Tax Payable:</strong> 
+            </div>
+            <div style="text-align: center; font-size: 48px;">
+                <span id="taxPayable"></span></p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
